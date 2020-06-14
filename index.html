@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario empleados</title>
+    <link rel="stylesheet" href="css/salario.css" />
+    <link rel="stylesheet" href="css/formoid-solid-purple.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet">
+    <script src="js/disabledtextfields.js"></script>
+    <script src="js/inputFilter.js"></script>
+    <script src="js/modernizr.custom.lis.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <header id="inset">
+        <h1>Pago de empleados</h1>
+    </header>
+    <section>
+    <article>
+    <div id="empleado">
+    <form action="pago.php" method="POST" name="facturacio" id="salario" 
+    class="formoid-solid-purple">
+    <div class="title">
+    <h2>Introducir datos</h2>
+    </div>
+
+    <div class="element-name">
+        <br/>
+        <label class="title"></label>
+        <div class="nameFirst">
+        <input type="text" name="nombre" id="txtempleado" maxlength="50" placeholder="Nombre" 
+        allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
+        messageid="alfabeticchars" class="large" required/>     
+    </div>
+    <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
+    </div>
+
+    <div class="element-name">
+        <label class="title"></label>
+        <div class="nameFirst">
+        <input type="text" name="puesto" id="txtempleado" maxlength="50" placeholder="Puesto de trabajo" 
+        allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
+        messageid="alfabeticchars" class="large" required/>
+        
+    </div>
+    <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
+    </div>
+
+    <div class="element-number">
+        <label class="title"></label>
+        <div>
+        <input type="number" name="cantidadho" id="sueldobase" maxlength="12" placeholder="Cantidad de horas" allowed="0123456789"  messageid="numbersonly" class="large" required/>
+        
+    </div>
+    <span id="numbersonly">Solo acepta números</span>
+    </div>
+
+    <div class="submit">
+        <input type="submit" name="enviar" id="enviar" value="Enviar"/>
+        <input type="reset" name="reset" id="reset" value="Restablecer" />
+</div>
+</form>
+</div>
+</article>
+</section>
+</body>
+</html>
