@@ -60,7 +60,7 @@
         ?>
         <a href="index.html" class="a-btn">
 			<span class="a-btn-symbol">i</span>
-			<span class="a-btn-slide-text">Ingresar otra compra</span>
+			<span class="a-btn-slide-text">Ingresar mas empleados</span>
 			<span class="a-btn-slide-icon"></span>
 		</a>
     </article>
