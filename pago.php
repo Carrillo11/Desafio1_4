@@ -12,115 +12,8 @@
     <script src="js/inputFilter.js"></script>
     <script src="js/modernizr.custom.lis.js"></script>
     <script src="js/prefixfree.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script>
-        let numero = 1;
-let nuevo = function() {
-  numero++;
-  jQuery('.inputs').append(`<section id="${numero}">
-    <div class="element-name">
-        <br/>
-        <h3>Empleado ${numero}</h3>
-        <label class="title"></label>
-        <div class="nameFirst">
-        <input type="text" name="nombre[]" id="txtempleado" maxlength="50" placeholder="Nombre" 
-        allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
-        messageid="alfabeticchars" class="large" required/>     
-        </div>
-       <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
-        </div>
-
-    <div class="element-name">
-        <label class="title"></label>
-        <div class="nameFirst">
-        <input type="text" name="puesto[]" id="txtempleado" maxlength="50" placeholder="Puesto de trabajo" 
-        allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
-        messageid="alfabeticchars" class="large" required/>    
-    </div>
-    <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
-    </div>
-
-    <div  class="element-name">
-        <label class="title"></label>
-        <div>
-        <input type="number" name="cantidadho[]" id="sueldobase" maxlength="12" placeholder="Cantidad de horas" allowed="0123456789"  messageid="numbersonly" class="large" required/>
-    </div>
-    <span id="numbersonly">Solo acepta números</span>
-    </div>
-
-    <button class="btn-danger" onclick="eliminar(${numero})">Eliminar</button></section>`);
-}
-
-let eliminar = function(n) {
-  jQuery("section").remove(`#${n}`);
-}
-    </script>
 </head>
 <body>
-<header id="inset">
-        <h1>Pago de empleados</h1>
-    </header>
-    <section>
-    <article>
-    <div id="empleado">
-    <form action="pago.php" method="POST" name="facturacio" id="salario" 
-    class="formoid-solid-purple">
-    <div class="title">
-    <h2>Introducir datos</h2>
-    </div>
-    <br>
-    <div  class="element-name">
-        
-        <label class="title"></label>
-        <div>
-        <input type="number" name="cantidadt" id="sueldobase" maxlength="12" placeholder="Cantidad de Empleados" allowed="0123456789"  messageid="numbersonly" class="large" required/>
-    </div>
-    <span id="numbersonly">Solo acepta números</span>
-    </div>
-    <div class="element-name">
-        <br/>
-        <h3>Empleado 1</h3>
-        <label class="title"></label>
-        <div class="nameFirst">
-        <input type="text" name="nombre[]" id="txtempleado" maxlength="50" placeholder="Nombre" 
-        allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
-        messageid="alfabeticchars" class="large" required/>     
-    </div>
-    <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
-    </div>
-
-    <div class="element-name">
-        <label class="title"></label>
-        <div class="nameFirst">
-        <input type="text" name="puesto[]" id="txtempleado" maxlength="50" placeholder="Puesto de trabajo" 
-        allowed="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóúÜü"
-        messageid="alfabeticchars" class="large" required/>
-        
-    </div>
-    <span id="alfabeticchars">Solo acepta caracteres alfabéticos</span>
-    </div>
-
-    <div  class="element-name">
-        <label class="title"></label>
-        <div>
-        <input type="number" name="cantidadho[]" id="sueldobase" maxlength="12" placeholder="Cantidad de horas" allowed="0123456789"  messageid="numbersonly" class="large" required/>
-    </div>
-    <span id="numbersonly">Solo acepta números</span>
-    </div>
-  <div class="inputs">
-    <button type="button" onclick="nuevo();">Agregar</button>
-  </div>
-
-    <div class="submit" >
-        <input type="submit" name="enviar" id="enviar" value="Enviar"/>
-        <input type="reset" name="reset" id="reset" value="Restablecer" />
-</div>
-</form>
-</div>
-</article>
-</section>
-
 <header id="inset">
     <h1>Boleta de pago</h1>
 </header>
@@ -165,8 +58,11 @@ let eliminar = function(n) {
         }
 
         ?>
-        <br>
-        <br>
+        <a href="index.html" class="a-btn">
+			<span class="a-btn-symbol">i</span>
+			<span class="a-btn-slide-text">Ingresar otra compra</span>
+			<span class="a-btn-slide-icon"></span>
+		</a>
     </article>
 </section>
 </body>
